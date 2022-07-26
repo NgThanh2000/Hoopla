@@ -7,7 +7,7 @@ import g5 from '../assets/image/g5.png';
 function Gallery(){
 
      return(
-        <div className="gallery" id="sc-2">
+        <div className="gallery category-title'" id="sc-2">
             <div className="gallery_f gallery_hv">
                 <img src={g1} alt="gallery_img"/>
                 <div className="gallery_show">

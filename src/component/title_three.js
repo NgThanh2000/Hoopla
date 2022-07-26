@@ -2,7 +2,7 @@ import Header from '../component/header';
 function TitleThree(){
 
     return(
-        <div className="title-three title_section" id="sc-7">
+        <div className="title-three title_section category-title'" id="sc-7">
         <Header/>
             <div className="inside-title">
                 <h2>

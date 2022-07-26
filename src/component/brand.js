@@ -12,7 +12,7 @@ import Header from '../component/header';
 
 function Brand(){
     return(
-        <div className="brand" id="sc-6">
+        <div className="brand category-title'" id="sc-6">
             <Header />
             <div className="inside_brand">
                 <div className="title_brand">

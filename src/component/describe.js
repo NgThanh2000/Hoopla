@@ -6,7 +6,7 @@ import sh4 from '../assets/image/sh4.png';
 
 function Describe(){
     return(
-        <div className="describe" id="sc-3">
+        <div className="describe category-title'" id="sc-3">
         <Header/>
             <div className="inside_describe">
                 <div className="title_describe">

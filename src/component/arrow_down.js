@@ -1,14 +1,69 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Vector from '../assets/image/Vector.png';
 
+// import $ from 'jquery';
+
+// let $categoryTitles = $('.category-title');
+// let $output = $('#output');
+
+// $(window).scroll(function() {
+//     let $topCat = $categoryTitles.filter((i, el) =>
+  
+//     $(el).offset().top > $(window).scrollTop() + 30).first();
+//     $output.text();
+//     $output.attr('href', '#'+ $topCat.prop('id'));
+//     console.log($(window).scrollTop());
+// }).scroll();
 
 function Arrow(){
 
+    
+    const array = [
+        {id:1 , name: '#sc-1'},
+        {id:2 , name: '#sc-2'},
+        {id:3 , name: '#sc-3'},
+        {id:4 , name: '#sc-4'},
+        {id:5 , name: '#sc-5'},
+        {id:6 , name: '#sc-6'},
+        {id:7 , name: '#sc-7'},
+    ];
+    // const get = array.forEach(function(array,index,ar){
+    //     console.log(array[1])
+    // })
+
+    const handleClickArrow = () => {
+        if(state === ''){
+            setState(array[0].name);
+        }
+        if(state === '#sc-1'){
+            setState(array[1].name);
+        }
+        if(state === '#sc-2'){
+            setState(array[2].name);
+        }
+        if(state === '#sc-3'){
+            setState(array[3].name);
+        }
+        if(state === '#sc-4'){
+            setState(array[4].name);
+        }
+        if(state === '#sc-5'){
+            setState(array[5].name);
+        }
+        if(state === '#sc-6'){
+            setState(array[6].name);
+        }
+        if(state === '#sc-7'){
+            setState(array[0].name);
+        }
+    }
+
+    const [state, setState] = useState('')
 
     return(
-        <div className="arrow">
+        <div className="arrow" >
             <div className="in_arrow">
-                <a href= '#tt' >
+                <a href= {state} id="output" onClick={handleClickArrow}>
                     <img src={Vector} alt="Arrow"></img>
                 </a>              
             </div>          

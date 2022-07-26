@@ -5,7 +5,7 @@ function TitleTwo(){
 
     }
     return(
-        <div className="title-two title_section" id="sc-5">
+        <div className="title-two title_section category-title'" id="sc-5">
             <Header/>
             <div className="inside-title">
                 <h2>

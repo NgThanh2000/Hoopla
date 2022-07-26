@@ -7,7 +7,7 @@ a{
     text-decoration: none;
 }
 :root {
-    --width-for-my-screen:1271px;
+    --width-for-my-screen:1300px;
     --width-fullscreen:100%;
     --font-family:sans-serif;
     --font-weight-400:400;
@@ -16,7 +16,17 @@ a{
 html{
     scroll-behavior: smooth;
 }
+h2{
+    text-align: center;
+    font-family: 'Brown';
+    font-weight: var(--font-weight-400);
+    font-size: 36px;
+    line-height: 44px;
+}
 /* This Is The Header Styel */
+/* .App{
+    width: 100%;
+} */
 .header{
     display: flex;
     flex-direction: row;
@@ -76,11 +86,11 @@ a{
 .footer{
     position: relative;
     width: var(--width-fullscreen);
-    height: 249px;
+    height: auto;
     background: var(--background-color);
     color: #FFFFFF;
     font-family: var(--font-family);
-    border: 1px solid #FFFFFF;
+    border-top: 1px solid #FFFFFF;
 }
 .footer a{
     font-weight: var(--font-weight-400);
@@ -103,10 +113,10 @@ a{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 64px 39px;
+    padding: 64px 0px;
     gap: 10px;
     width: var(--width-for-my-screen);
-    height: 121px;
+    min-height: auto;
 }
 .inside_footer-left{
     display: flex;
@@ -114,7 +124,8 @@ a{
     justify-content: space-between;
     align-items: flex-start;
     width: 470px;
-    height: 100%;
+    height: 121px;
+    padding: 0px 39px;
 }
 .footer_logo{
     height: 100%;
@@ -130,7 +141,8 @@ a{
 }
 .inside_footer-right{
     width: 400px;
-    height: 100%; 
+    height: 121px; 
+    padding: 0px 39px;
 }
 .inside_footer-right button{
     display: flex;
@@ -193,11 +205,6 @@ a{
     align-items: center;
 }
 .inside-title h2{
-    text-align: center;
-    font-family: 'Brown';
-    font-weight: var(--font-weight-400);
-    font-size: 36px;
-    line-height: 44px;
     color: #FFFFFF;
 }
 /* title-two */
@@ -271,10 +278,6 @@ font-size: 16px;
 }
 .describe h2{
     color:#191A19;
-    font-family: 'Brown';
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: var(--font-weight-400);
 }
 .describe p{
     color:black;
@@ -297,6 +300,7 @@ font-size: 16px;
 }
 .in_content{
     width: 247px;
+    height: auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -311,6 +315,9 @@ font-size: 16px;
 }
 .in_content-img{
     margin-bottom: 40px;
+}
+.in_content-img img{
+    height: 104px;
 }
 .in_content-text {
     height: 145px;
@@ -344,12 +351,6 @@ font-size: 16px;
 }
 .title_brand{
     margin-bottom: 103px;
-}
-.brand h2{
-    text-align: center;
-    font-size: 36px;
-    line-height: 44px;
-    font-weight: var(--font-weight-400);
 }
 .logo_brand{
     display: flex;
@@ -412,12 +413,13 @@ font-size: 16px;
     width: 100%;
     height: 100%;
     background-color: var(--background-color);
-    display: none;
+    /* display: none; */
     opacity: 0;
-    /* transform: transslateY(30px); */
-    transition: ease-in-out 1s;
+    transform: translateY(20px);
+    transition: ease-in-out .6s;
 }
 .gallery_hv:hover .gallery_show{
+    transform: translateY(0px);
     display: block;
     opacity: 1;
     
@@ -433,7 +435,7 @@ font-size: 16px;
     align-items: flex-start;
 }
 .show-text{
-    width: 321px;
+    width: auto;
     height: auto;
     padding: 0px 0px 48px 40px;
    
@@ -461,5 +463,155 @@ font-size: 16px;
 .arrow img{
     border: #181a18 1px transparent;
     margin: 0 auto;
+}
+
+@media only screen and (max-width:1439px){
+    .inside_footer{
+        width: 100%;
+    }
     
 }
+@media only screen and (max-width:1024px){
+    .inside_describe {
+        height: 600px;
+    }
+    .content_describe{
+        flex-direction: row;
+        width: 800px;
+        height: auto;
+    }
+    .in_content{
+        height: 400px;
+    }
+    .in_content-img{
+        margin-bottom: 20px;
+    }
+    .in_content-text {
+        height: 252px;
+    }
+    .in_content-text h3{
+        min-height: 48px;
+    }
+    .gallery_show{
+        display: none;
+    }
+    .show-text {
+        width: 225px;
+    }
+}
+@media only screen and (max-width:912px){
+    h2{
+        font-size: 30px;
+    }
+    .gallery h3, p{
+        font-size: 20px;
+    }
+    .logo_brand{
+        width: 600px;
+    }
+    .inside_footer-right {
+        padding: 0px 0px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    h2{
+        font-size: 26px;
+    }
+    .title_section, .image_bg, .title-two{
+        height: 700px;
+    }
+    .brand{
+        height: 1080px;
+    }
+    .title_brand {
+        margin-bottom: 60px;
+    }
+    .moretitle_brand h2{
+        margin: 65px 0px 65px 0px;
+    }
+    .content_describe{
+        width: 670px;
+    }
+    .inside_footer-left {
+        padding: 0px 0px 0px 39px;
+    }
+    .show-text{
+        width: 200px;
+        padding: 0px 0px 20px 20px;
+    }
+    .footer_address {
+        padding-right: 10px;
+    }
+    .copyright :nth-child(1) {
+        margin: 0px 10px 0px 0px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .title_section, .image_bg, .title-two{
+        height: 500px;
+    }
+    h2{
+        font-size: 22px;
+        line-height: 31px;
+    }
+    .header a{
+        font-size: 13px;
+    }
+    .header_icon img{
+        width: 15px;
+        height: 15px;
+    }
+    .gallery h3, p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .inside_describe {
+        gap: 30px;
+        height: auto;
+    }
+    .show-text{
+        width: auto;
+        padding:0px 0px 5px 5px;
+        margin: 0 auto;
+    }
+    .in_content {
+        width: 200px;
+        height: 263px;
+    }
+    .content_describe{
+        width: 422px;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+    .in_content-img img{
+        width: 71px;
+        height: 66px;
+    }
+    .logo_brand{
+        width: 494px;
+    }
+    .services_page a {
+        font-size: 12px;
+    }
+    .inside_footer{
+        padding: 30px 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inside_footer-left{
+        height: 100px;
+        padding: 0px;
+        
+    }
+    .inside_footer-right{
+        height: 100px;
+        width: 478px;
+    }
+}
+@media only screen and (max-width:540px){
+    .services_page a {
+        font-size: 11px;
+    }
+}
+
+    

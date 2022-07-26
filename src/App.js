@@ -12,6 +12,8 @@ import Brand from './component/brand';
 import Gallery from './component/gallery';
 import Arrow from './component/arrow_down';
 
+// import '<pathToYourLoader>/loader.js'
+
 function App() {
   return (
     <div className="App">
