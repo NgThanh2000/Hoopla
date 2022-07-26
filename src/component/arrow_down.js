@@ -8,7 +8,7 @@ function Arrow(){
     return(
         <div className="arrow">
             <div className="in_arrow">
-                <a href= '#tt' onClick={s}>
+                <a href= '#tt' >
                     <img src={Vector} alt="Arrow"></img>
                 </a>              
             </div>          
