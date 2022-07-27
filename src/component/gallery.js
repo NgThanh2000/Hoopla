@@ -20,17 +20,17 @@ function Gallery(){
                 </div>
             </div>
 
-            <div>
+            <div className="gp">
                 <img src={g2} alt="gallery_img"/>
             </div>
             
-            <div><img src={g3} alt="gallery_img"/></div>
+            <div className="gp"><img src={g3} alt="gallery_img"/></div>
             
-            <div>
+            <div className="gp">
                 <img src={g4} alt="gallery_img"/>
             </div>
             
-            <div className="gallery_l gallery_hv">
+            <div className="gallery_l gallery_hv gp">
                 <img src={g5} alt="gallery_img"/>
                 <div className="gallery_show">
                     <div className="gallery_show-text">

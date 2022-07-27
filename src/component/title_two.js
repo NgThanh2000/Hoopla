@@ -2,7 +2,7 @@ import Header from "../component/header";
 function TitleTwo(){
 
     const handleClick = () =>{
-
+        alert("What do you want to do?");
     }
     return(
         <div className="title-two title_section category-title'" id="sc-5">
