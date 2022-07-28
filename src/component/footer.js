@@ -8,10 +8,10 @@ function Footer(){
             <div className="inside_footer">
                 <div className="inside_footer-left">
                     <div className="footer_logo flex_for_footer">
-                        <img src={logo} alt="logo" className="logo"/>
+                        <a href="#sc-1"><img src={logo} alt="logo" className="logo"/></a>                       
                         <div className="social-icons">
-                            <img src={instagram} alt="instagram"/>
-                            <img src={linkedIn} alt="linked-in"/>
+                            <a href="#instagram"><img src={instagram} alt="instagram"/></a>
+                            <a href="#linkedIn"><img src={linkedIn} alt="linked-in"/></a>
                         </div>
                     </div>
                     <div className="footer_address flex_for_footer">
