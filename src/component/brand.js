@@ -9,7 +9,6 @@ import b8 from '../assets/image/b8.png';
 import b9 from '../assets/image/b9.png';
 import b10 from '../assets/image/b10.png';
 import Header from '../component/header';
-
 function Brand(){
     return(
         <div className="brand category-title'" id="sc-6">

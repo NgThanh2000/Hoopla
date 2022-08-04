@@ -22,15 +22,22 @@ function Footer(){
                         </div>
                         <div className="copyright">
                             <span>© Studio Hoopla 2022</span>
-                            <span>Privacy Policy</span>
+                            <span><a href="#pp">Privacy Policy</a></span>
                         </div>
                     </div>
                 </div>
                 <div className="inside_footer-right flex_for_footer">
                     <form id="ft-form">
-                        <input type="text" placeholder="Stay in the Hoopla loop by entering your email"></input>                       
+                        <input type="text" placeholder="Stay in the Hoopla loop by entering your email" list="browsers"></input>
+                        <datalist id="browsers">
+                            <option value="Hoopla"/>
+                            <option value="Contact"/>
+                            <option value="Assets"/>
+                            <option value="Motion"/>
+                            <option value="Collateral"/>
+                        </datalist>                     
                     </form>
-                    <button type="submit" from="ft-form" value="Submit" >Submit</button>                   
+                    <button type="submit" from="ft-form" value="Submit">Submit</button>                   
                 </div>
             </div>
         </div>

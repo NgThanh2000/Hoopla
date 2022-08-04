@@ -1,9 +1,11 @@
-import Header from '../component/header'
+import Header from '../component/header';
+import Agency from './agency';
 function Title(){
 
     return(
         <div className="title_section category-title'" id="sc-1">
         <Header/>
+
             <div className="inside-title">
                 <h2>We get it. You're done with explaining the nuances
                     <br></br>of your industry to design agencies. 

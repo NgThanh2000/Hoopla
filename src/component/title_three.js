@@ -7,7 +7,7 @@ function TitleThree(){
             <div className="inside-title">
                 <h2>
                 Want to chat about your brand or marketing challenge?
-                <br></br>Talk to Julie on +61 438 266 782 or via email.
+                <br></br>Talk to Julie on <b>+61 438 266 782</b> or via email.
                 </h2>
             </div>
         </div>
