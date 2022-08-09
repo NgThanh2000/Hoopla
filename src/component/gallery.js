@@ -1,47 +1,85 @@
-import g1 from '../assets/image/g1.png';
-import g2 from '../assets/image/g2.png';
-import g3 from '../assets/image/g3.png';
-import g4 from '../assets/image/g4.png';
-import g5 from '../assets/image/g5.png';
+import {useState,useEffect}  from 'react'
 
+const value_query = `
+{
+    gallerys {
+      nodes {
+        id
+        twos
+        tttwos
+        ttones
+        one
+        iones {
+          sourceUrl
+        }
+        itwos {
+          sourceUrl
+        }
+        ithrees {
+          sourceUrl
+        }
+        ifours {
+          sourceUrl
+        }
+        ifives {
+          sourceUrl
+        }
+      }
+    }
+  }
+`
 function Gallery(){
 
-     return(
-        <div className="gallery category-title'" id="sc-2">
-            <div className="gallery_f gallery_hv">
-                <img src={g1} alt="gallery_img"/>
-                <div className="gallery_show">
-                    <div className="gallery_show-text">
-                        <div className='show-text'>
-                            <h3>Vision Australia</h3>
-                            <p>Re-imagined campaign for an iconic Melbourne event</p>
-                        </div>    
-                    </div>
-                </div>
-            </div>
+    const [value,setValue] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost/Hoopla/graphql/',{
+          method :"POST",
+          headers :{"Content-Type": "application/json"},
+          body : JSON.stringify({query: value_query })
+        }).then(response => response.json())
+        .then(data => setValue(data.data.gallerys.nodes))
+      },[]);
 
-            <div className="gp">
-                <img src={g2} alt="gallery_img"/>
-            </div>
-            
-            <div className="gp"><img src={g3} alt="gallery_img"/></div>
-            
-            <div className="gp">
-                <img src={g4} alt="gallery_img"/>
-            </div>
-            
-            <div className="gallery_l gallery_hv gp">
-                <img src={g5} alt="gallery_img"/>
-                <div className="gallery_show">
-                    <div className="gallery_show-text">
-                        <div className='show-text'>
-                            <h3>Data Migrators</h3>
-                            <p>Rebrand of global specialists in data processing software</p>
-                        </div>                      
+     return(
+        <>
+        {value.map((value,index) => (
+        <div className="gallery category-title'" id="sc-2"key={value.id}>   
+                    <div className="gallery_f gallery_hv">
+                        <img src={value.iones.sourceUrl} alt="gallery_img"/>
+                        <div className="gallery_show">
+                            <div className="gallery_show-text">
+                                <div className='show-text'>
+                                    <h3>{value.ttones}</h3>
+                                    <p>{value.one}</p>
+                                </div>    
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                    <div className="gp">
+                        <img src={value.itwos.sourceUrl} alt="gallery_img"/>
+                    </div>
+                    
+                    <div className="gp"><img src={value.ithrees.sourceUrl}alt="gallery_img"/></div>
+                    
+                    <div className="gp">
+                        <img src={value.ifours.sourceUrl} alt="gallery_img"/>
+                    </div>
+                    
+                    <div className="gallery_l gallery_hv gp">
+                        <img src={value.ifives.sourceUrl} alt="gallery_img"/>
+                        <div className="gallery_show">
+                            <div className="gallery_show-text">
+                                <div className='show-text'>
+                                    <h3>{value.tttwos}</h3>
+                                    <p>{value.twos}</p>
+                                </div>                      
+                            </div>
+                        </div>
+                    </div>
         </div>
+        ))}  
+        </>
      )
 }
 export default Gallery;
